@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   text-decoration: none;
   color: #f5f5f5;
@@ -138,4 +142,15 @@ ul {
       -ms-grid-row-align: center;
       align-self: center;
   font-size: 1.5rem;
+}
+
+.my-awesome {
+  background-color: #11749e;
+  color: #f5f5f5;
+  text-align: center;
+  overflow: hidden;
+}
+
+.my-awesome .container {
+  margin: 100px auto;
 }

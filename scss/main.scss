@@ -2,6 +2,10 @@
 $primary-color: #f5f5f5;
 $secondary-color: #11749e;
 
+html {
+  scroll-behavior: smooth;
+}
+
 // NAVBAR
 
 a {
@@ -123,5 +127,17 @@ ul {
         }
       }
     }
+  }
+}
+
+//  AWESOME
+.my-awesome {
+  background-color: $secondary-color;
+  color: $primary-color;
+  text-align: center;
+  overflow: hidden;
+
+  .container {
+    margin: 100px auto;
   }
 }
