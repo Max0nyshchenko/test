@@ -13,7 +13,7 @@
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./css/main.min.css" />
+    <link rel="stylesheet" href="./css/main.css" />
     <title>Document</title>
   </head>
   <body>
@@ -56,6 +56,7 @@
         </ul>
       </div>
     </nav>
+<!--    SHOWCASE SECTION    -->
     <section class="my-showcase">
       <div class="container">
         <h1 class="showcase-title">CREATIVES</h1>
@@ -68,59 +69,100 @@
         </div>
       </div>
     </section>
+<!--    AWESOME SECTION   -->
     <section id="awesome" class="my-awesome">
       <div class="container">
         <div class="awesome-heading">
           <div class="w">W</div>
-          WE ARE AN AWESOME AGENCY
+          <div class="awesome-heading-text">WE ARE AN AWESOME AGENCY</div>
         </div>
+        <!-- FEATURES -->
         <div
           class="awesome-features row row-cols-1 row-cols-sm-2 row-cols-md-4"
         >
-          <div class="feature">
-            <div class="feature-icon col"></div>
-            <h2>FEATURE ONE</h2>
+          <div class="feature col">
+            <div class="feature-icon flex justify-content-center align-items-center">
+              <i class="far fa-edit"></i>
+            </div>
+            <h6>FEATURE ONE</h6>
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis
-              mollitia, distinctio perspiciatis ad ratione, fugit quam quod
-              facilis accusantium expedita architecto. Tenetur in repudiandae
-              vel qui laboriosam modi cumque distinctio.
+              mollitia, distinctio perspiciatis ad ratione.
             </p>
           </div>
-          <div class="feature">
-            <div class="feature-icon col"></div>
-            <h2>FEATURE TWO</h2>
+          <div class="feature col">
+            <div class="feature-icon flex justify-content-center align-items-center">
+              <i class="far fa-edit"></i>
+            </div>
+            <h6>FEATURE TWO</h6>
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis
-              mollitia, distinctio perspiciatis ad ratione, fugit quam quod
-              facilis accusantium expedita architecto. Tenetur in repudiandae
-              vel qui laboriosam modi cumque distinctio.
+              mollitia, distinctio perspiciatis ad ratione.
             </p>
           </div>
-          <div class="feature">
-            <div class="feature-icon col"></div>
-            <h2>FEATURE THREE</h2>
+          <div class="feature col">
+            <div class="feature-icon flex justify-content-center align-items-center">
+              <i class="fas fa-search"></i>
+            </div>
+            <h6>FEATURE THREE</h6>
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis
-              mollitia, distinctio perspiciatis ad ratione, fugit quam quod
-              facilis accusantium expedita architecto. Tenetur in repudiandae
-              vel qui laboriosam modi cumque distinctio.
+              mollitia, distinctio perspiciatis ad ratione.
             </p>
           </div>
-          <div class="feature">
-            <div class="feature-icon col"></div>
-            <h2>FEATURE FOUR</h2>
+          <div class="feature col">
+            <div class="feature-icon flex justify-content-center align-items-center">
+              <i class="far fa-comment"></i>
+            </div>
+            <h6>FEATURE FOUR</h6>
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis
-              mollitia, distinctio perspiciatis ad ratione, fugit quam quod
-              facilis accusantium expedita architecto. Tenetur in repudiandae
-              vel qui laboriosam modi cumque distinctio.
+              mollitia, distinctio perspiciatis ad ratione.
             </p>
           </div>
         </div>
       </div>
     </section>
+<!--   HEAR    SECTION   -->
+  <section class="hear">
+    <div class="container">
+      <div class="awesome-heading">
+        <div class="w c">C</div>
+        <div class="awesome-heading-text ">WE'D LOVE TO HEAR ABOUT YOUR PROJECT.</div>
+      </div>
+      <!-- FORM -->
+      <form action="POST" class="mt-5 pt-1">
+        <div class="row mb-4 mt-5 row-cols-1 row-cols-sm-1 row-cols-md-3">
+          <div class="col mb-2">
+            <input type="text" class="form-control" placeholder="Name">
+          </div>
+          <div class="col mb-2">
+            <input type="email" class="form-control" placeholder="Email">
+          </div>
+          <div class="col mb-2">
+            <input type="tel" class="form-control" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Phone">
+          </div>
+        </div>
+        <div class="placeholder">
+          <textarea
+                  class="form-control mb-4 pt-4"
+                  id="validationTextarea"
+          >
+        </textarea>
+        </div>
+        <button type="submit" class="mx-auto btn btn-primary btn-lg">SUBMIT</button>
+      </form>
+    </div>
+  </section>
+<!--    FOOTER  -->
+  <footer class="pt-2 pb-2">
+    <div class="container flex justify-content-between pt-4 pb-4 align-items-center">
+      <p>&copy; 2020 PSDfreebies.com - All Right Reserved</p>
+      <img src="./img/bee.svg" alt="bee"></span>
+    </div>
+  </footer>
   </body>
+<!--  SCRIPT  -->
   <script
     src="https://kit.fontawesome.com/39d2f8a68c.js"
     crossorigin="anonymous"

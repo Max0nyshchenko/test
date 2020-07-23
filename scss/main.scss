@@ -1,9 +1,18 @@
 // Global
+
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
+
 $primary-color: #f5f5f5;
 $secondary-color: #11749e;
 
 html {
   scroll-behavior: smooth;
+}
+
+.flex {
+  display: flex;
 }
 
 // NAVBAR
@@ -24,6 +33,7 @@ a {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 5;
   border-bottom: 1px solid #ffffff86;
 
   .navbar-logo {
@@ -140,4 +150,126 @@ ul {
   .container {
     margin: 100px auto;
   }
+
+  .awesome-features {
+    margin-top: 5rem;
+
+    .feature {
+      h6 {
+        font-weight: bold;
+        margin: 1rem 0;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
+
+      .feature-icon {
+        font-size: 1.8rem;
+        background-color: #1D7BA3;
+        height: 7rem;
+        width: 7rem;
+        margin: 0 auto;
+        border-radius: 50%;
+
+        .fa-edit {
+          transform: translate(0.2rem, 0);
+        }
+
+      }
+    }
+  }
 }
+
+.awesome-heading {
+  position : relative;
+  padding: 2rem 1rem;
+  .awesome-heading-text {
+    position: relative;
+    font-size: 2.3rem;
+    z-index: 2;
+    color: $primary-color;
+    text-align: center;
+  }
+  .w {
+    font-family: 'Oswald', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 13rem;
+    z-index: 0;
+    font-weight: 900;
+    transform: translate(-50%, -50%);
+    color: #3C8DAF;
+    &.c {
+      //transform: scale(1.2) translate(-50%, -43%);
+      color: rgba(255, 255, 255, 0.41);
+    }
+  }
+
+}
+
+//HEAR SECTION
+.hear {
+  background-image: url("../img/hear.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+
+  .container {
+    margin: 8rem auto;
+
+    .form-control {
+      background-color: transparent;
+    }
+
+    .btn-lg {
+      border-radius: 0;
+      padding: .5rem 3rem;
+      background-color: $secondary-color;
+    }
+
+    button {
+      display: block;
+    }
+
+    textarea {
+      height: 7rem;
+    }
+
+    input, textarea {
+      color: $primary-color !important;
+    }
+
+    .placeholder {
+      position: relative;
+      overflow: hidden;
+      display: inline;
+
+      &::before {
+        content: 'Message';
+        position: absolute;
+        color: #6C726C;
+        top: .3rem;
+        left: 1rem;
+      }
+    }
+  }
+}
+
+// FOOTER
+footer {
+  background-color: #222222;
+  overflow: hidden;
+  color: $primary-color;
+
+  p {
+    margin-bottom: 0rem;
+    font-size: .8rem;
+  }
+
+  img {transform: translateY(-19%);}
+}
+
