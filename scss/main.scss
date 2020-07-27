@@ -6,6 +6,7 @@
 
 $primary-color: #f5f5f5;
 $secondary-color: #11749e;
+$transition: all .24s ease-in-out;
 
 html {
   scroll-behavior: smooth;
@@ -25,6 +26,10 @@ a {
   text-decoration: none;
   color: $primary-color;
 }
+.plus-height {
+  height: 40vh !important;
+  background-color: #2d2d2de8 !important;
+}
 .my-navbar {
   display: flex;
   padding: 0rem 6.5rem;
@@ -35,10 +40,17 @@ a {
   right: 0;
   z-index: 5;
   border-bottom: 1px solid #ffffff86;
+  transition: $transition;
 
   .navbar-logo {
+    transition: $transition;
     display: grid;
     align-items: center;
+
+    &.hide-logo {
+      transform: translateX(-100%);
+    }
+
 
     img {
       height: 10vh;
@@ -46,6 +58,7 @@ a {
   }
 }
 .navbar-links {
+  transition: $transition;
   display: flex;
   width: 90%;
   justify-content: center;
@@ -81,6 +94,49 @@ ul {
     transform: translateY(3px);
   }
 }
+
+.show-navbar-links {
+  height: 20rem !important;
+}
+
+.burger {
+  display: none;
+  position: absolute;
+  right: 3px;
+  top: 50%;
+  transform: translateY(-52%);
+  z-index: 10;
+  &:focus {
+    outline: none;
+  }
+
+  outline:none;
+  background-color: transparent;
+  border: none;
+  //overflow: hidden;
+  transition: $transition;
+  div {
+    background-color: $primary-color;
+    height: 3px;
+    width: 23px;
+    margin: 3px;
+    transition: $transition;
+  }
+
+  &.clicked {
+    transform: rotate(90deg) translateX(-50%);
+    div:nth-child(1) {
+      transform: rotate(45deg) translate(10px, 10px);
+    }
+    div:nth-child(2) {
+      opacity: 0;
+    }
+    div:nth-child(3) {
+      transform: rotate(-45deg) translate(-1px, 2px);
+    }
+  }
+}
+
 
 // Showcase
 .my-showcase {
@@ -274,6 +330,18 @@ footer {
 }
 
 //MEDIA
+@media screen  and (max-width: 1174px) and (min-width:1025px) {
+  .navbar-links {
+    width: 100%;
+    justify-content: space-between;
+    ul {
+      padding-left: .5rem;
+      li {
+        margin: 0 .5rem;
+      }
+    }
+  }
+}
 @media screen and (max-width:1024px) {
   .my-navbar {
     padding: 0  2.5rem;
@@ -316,15 +384,41 @@ footer {
   }
   .my-navbar {
     padding: 0;
-    height: auto;
+    height: 10.1vh;
     overflow: hidden;
-    justify-content: space-between;
+    flex-direction: column;
+    .navbar-logo {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .burger {
+      display: block;
+    }
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
     .navbar-links {
+      overflow: hidden;
+      height: 0;
       width: auto;
+      align-items: center;
+      flex-direction: column;
+    }
+    .text-links {
+      flex-direction: column;
+      align-content: center;
     }
     ul {
-      display: block;
+      display: flex;
       padding: 0;
+      li {
+        margin: .5rem .2rem !important;
+        a {
+          width: 100%;
+          text-align: center;
+        }
+      }
 
       .active-link {
         border: none;
@@ -336,28 +430,34 @@ footer {
   }
 }
 @media screen and (max-width:330px) {
-  .my-navbar {
-    padding: 0;
-    height: auto;
-    overflow: hidden;
-    ul {
-      display: block;
-      padding: 0;
-
-      .active-link {
-        border: none;
-        a {
-          color: $secondary-color;
-        }
-      }
-    }
-  }
+  //.my-navbar {
+  //  padding: 0;
+  //  height: auto;
+  //  overflow: hidden;
+  //  ul {
+  //    display: block;
+  //    padding: 0;
+  //
+  //    .active-link {
+  //      border: none;
+  //      a {
+  //        color: $secondary-color;
+  //      }
+  //    }
+  //  }
+  //}
 
   .my-showcase {
     .container {
       .showcase-title {
-        font-size: 3rem;
+        font-size: 2rem;
+      }
+      .showcase-subtitle {
+        font-size: .7rem;
       }
     }
+  }
+  .awesome-heading-text {
+    font-size: 1.5rem !important;
   }
 }

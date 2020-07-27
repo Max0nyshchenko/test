@@ -13,15 +13,20 @@
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./css/main.min.css" />
+    <link rel="stylesheet" href="./css/main.css" />
     <title>Document</title>
   </head>
   <body>
     <!--      NAVBAR      -->
-    <nav class="my-navbar">
+    <nav id="nav" class="my-navbar">
       <a href="#" class="navbar-logo">
         <img src="./img/Logo.svg" alt="Logo" />
       </a>
+        <button onclick="burgerHandler()" class="burger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </button>
       <div class="navbar-links">
         <ul class="text-links">
           <li class="active-link">
@@ -167,4 +172,5 @@
     src="https://kit.fontawesome.com/39d2f8a68c.js"
     crossorigin="anonymous"
   ></script>
+  <script src="./app.js"></script>
 </html>
