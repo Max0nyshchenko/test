@@ -1,9 +1,28 @@
-// Global
+// GLOBAL
 
-
+//fonts
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
-
-
+@font-face {
+  font-family: 'Gotham Bold';
+  src: url(../font/Gotham-Bold.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Gotham Medium';
+  src: url(../font/Gotham-Medium.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Roboto Bold Condenced';
+  src: url(../font/roboto-bold-condenced.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Gotham Book';
+  src: url(../font/ghotam-book.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Myriad Pro Regular';
+  src: url(../font/myriad-pro-regular.otf) format('opentype');
+}
+//variables
 $primary-color: #f5f5f5;
 $secondary-color: #11749e;
 $transition: all .24s ease-in-out;
@@ -31,6 +50,7 @@ a {
   background-color: #2d2d2de8 !important;
 }
 .my-navbar {
+  font-family: 'Myriad Pro Regular', Serif;
   display: flex;
   padding: 0rem 6.5rem;
   height: 13vh;
@@ -153,12 +173,14 @@ ul {
     text-align: center;
 
     .showcase-title {
+      font-family: 'Gotham Bold', Serif;
       font-weight: 900;
       font-size: 6rem;
       margin: 0;
     }
 
     .showcase-subtitle {
+      font-family: 'Gotham Medium', Serif;
       color: $secondary-color;
       font-size: 1rem;
       letter-spacing: 0.68rem;
@@ -168,6 +190,7 @@ ul {
       margin-top: 17vh;
 
       p {
+        font-family: "Open Sans", sans-serif;
         font-size: 0.7rem;
       }
 
@@ -212,11 +235,13 @@ ul {
 
     .feature {
       h6 {
+        font-family: 'Gotham Medium', Serif;
         font-weight: bold;
         margin: 1rem 0;
       }
 
       p {
+        font-family: 'Gotham Book', Serif;
         font-size: 0.9rem;
       }
 
@@ -241,6 +266,7 @@ ul {
   position : relative;
   padding: 2rem 1rem;
   .awesome-heading-text {
+    font-family: 'Gotham Medium', Serif;
     position: relative;
     font-size: 2.3rem;
     z-index: 2;
@@ -248,7 +274,7 @@ ul {
     text-align: center;
   }
   .w {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Roboto Bold Condenced', sans-serif;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -288,6 +314,7 @@ ul {
     }
 
     button {
+      font-family: 'Gotham Medium', Serif;
       display: block;
     }
 
@@ -317,6 +344,7 @@ ul {
 
 // FOOTER
 footer {
+  font-family: "Roboto Light", sans-serif;
   background-color: #222222;
   overflow: hidden;
   color: $primary-color;
@@ -330,6 +358,125 @@ footer {
 }
 
 //MEDIA
+@media screen and (min-width: 1460px){
+  #nav {
+    padding: 0rem 12.5rem;
+    height: 7rem;
+    .navbar-logo {
+      img {
+        margin-left: .8rem;
+        margin-top: .4rem;
+        height: 8vh;
+      }
+    }
+
+    .navbar-links {
+      justify-content: space-between;
+      margin-left: 2.3rem;
+      font-size: 1.2rem;
+
+      .text-links {
+        padding-left: 11.5rem;
+        li {
+          margin: 0 .35rem;
+        }
+      }
+      .icon-links {
+        li {
+          margin: 0 0.5rem;
+        }
+      }
+      ul {
+        li {
+          a {
+            margin-top: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  .my-showcase {
+    height: 55rem;
+    .container {
+      margin-top: 24.5rem;
+      .scroll-down {
+        margin-top: 6.5rem;
+        p {
+          font-size: .9rem;
+        }
+      }
+      .showcase-title {
+        font-size: 9rem;
+        margin: -1.3rem;
+      }
+      .showcase-subtitle {
+        font-size: 1.5rem;
+        letter-spacing: 1.1rem;
+        margin: 1rem 0 0 .8rem;
+      }
+    }
+  }
+  .my-awesome {
+    height: 46rem;
+    .container {
+      .awesome-heading {
+        .w {
+          font-size: 16rem;
+          top: 65%;
+        }
+        .awesome-heading-text {
+          margin-top: 1.5rem;
+        }
+      }
+      .awesome-features {
+        margin-top: 7rem;
+        .feature {
+          .feature-icon {
+            font-size: 2.3rem;
+            height: 8rem;
+            width: 8rem;
+          }
+        }
+      }
+    }
+  }
+  .hear {
+    height: 58rem;
+
+    .container{
+      max-width: 1200px;
+      .awesome-heading{
+        margin-top: 11rem;
+        .w.c {
+          font-size: 16rem;
+        }
+      }
+      form {
+        margin-top: 3.5rem !important;
+        .row {
+          .col {
+            input {
+              height: 3rem;
+            }
+          }
+        }
+        textarea {
+          height: 10rem;
+          margin-bottom: 3rem !important;
+        }
+      }
+      button.btn-lg {
+        padding: .8rem 4rem;
+        font-size: 1.5rem
+      }
+    }
+  }
+  footer {
+    height: 8rem;
+    display: flex;
+  }
+}
 @media screen  and (max-width: 1174px) and (min-width:1025px) {
   .navbar-links {
     width: 100%;
@@ -430,23 +577,6 @@ footer {
   }
 }
 @media screen and (max-width:330px) {
-  //.my-navbar {
-  //  padding: 0;
-  //  height: auto;
-  //  overflow: hidden;
-  //  ul {
-  //    display: block;
-  //    padding: 0;
-  //
-  //    .active-link {
-  //      border: none;
-  //      a {
-  //        color: $secondary-color;
-  //      }
-  //    }
-  //  }
-  //}
-
   .my-showcase {
     .container {
       .showcase-title {
